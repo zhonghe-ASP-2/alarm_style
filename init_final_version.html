@@ -1,0 +1,826 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title> New Document </title>
+    <meta name="Generator" content="EditPlus">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <style>
+
+        body {
+            width: 600px;
+            margin: 40px auto;
+            font-family: 'trebuchet MS', 'Lucida sans', Arial;
+            font-size: 14px;
+            color: #000000;
+        }
+
+        table {
+            *border-collapse: collapse; /* IE7 and lower */
+            border-spacing: 0;
+            width: 100%;
+        }
+
+        .bordered {
+            border: solid #ccc 1px;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            border-radius: 6px;
+            -webkit-box-shadow: 0 1px 1px #ccc;
+            -moz-box-shadow: 0 1px 1px #ccc;
+            box-shadow: 0 1px 1px #ccc;
+        }
+
+        .bordered tr:hover {
+            background: #fbf8e9;
+            -o-transition: all 0.1s ease-in-out;
+            -webkit-transition: all 0.1s ease-in-out;
+            -moz-transition: all 0.1s ease-in-out;
+            -ms-transition: all 0.1s ease-in-out;
+            transition: all 0.1s ease-in-out;
+        }
+
+        .bordered td, .bordered th {
+            border-left: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .bordered th {
+            background-color: #dce9f9;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+            background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+            background-image: -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+            background-image: -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+            background-image: -o-linear-gradient(top, #ebf3fc, #dce9f9);
+            background-image: linear-gradient(top, #ebf3fc, #dce9f9);
+            -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+            -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+            box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+            border-top: none;
+            text-shadow: 0 1px 0 rgba(255,255,255,.5);
+        }
+
+        .bordered td:first-child, .bordered th:first-child {
+            border-left: none;
+        }
+
+        .bordered th:first-child {
+            -moz-border-radius: 6px 0 0 0;
+            -webkit-border-radius: 6px 0 0 0;
+            border-radius: 6px 0 0 0;
+        }
+
+        .bordered th:last-child {
+            -moz-border-radius: 0 6px 0 0;
+            -webkit-border-radius: 0 6px 0 0;
+            border-radius: 0 6px 0 0;
+        }
+
+        .bordered th:only-child{
+            -moz-border-radius: 6px 6px 0 0;
+            -webkit-border-radius: 6px 6px 0 0;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .bordered tr:last-child td:first-child {
+            -moz-border-radius: 0 0 0 6px;
+            -webkit-border-radius: 0 0 0 6px;
+            border-radius: 0 0 0 6px;
+        }
+
+        .bordered tr:last-child td:last-child {
+            -moz-border-radius: 0 0 6px 0;
+            -webkit-border-radius: 0 0 6px 0;
+            border-radius: 0 0 6px 0;
+        }
+
+        /*----------------------*/
+
+        .zebra td, .zebra th {
+            padding: 10px;
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        .zebra tbody tr:nth-child(even) {
+            background: #f5f5f5;
+            -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+            -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+            box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+        }
+
+        .zebra th {
+            text-align: left;
+            text-shadow: 0 1px 0 rgba(255,255,255,.5);
+            border-bottom: 1px solid #ccc;
+            background-color: #eee;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eee));
+            background-image: -webkit-linear-gradient(top, #f5f5f5, #eee);
+            background-image: -moz-linear-gradient(top, #f5f5f5, #eee);
+            background-image: -ms-linear-gradient(top, #f5f5f5, #eee);
+            background-image: -o-linear-gradient(top, #f5f5f5, #eee);
+            background-image: linear-gradient(top, #f5f5f5, #eee);
+        }
+
+        .zebra th:first-child {
+            -moz-border-radius: 6px 0 0 0;
+            -webkit-border-radius: 6px 0 0 0;
+            border-radius: 6px 0 0 0;
+        }
+
+        .zebra th:last-child {
+            -moz-border-radius: 0 6px 0 0;
+            -webkit-border-radius: 0 6px 0 0;
+            border-radius: 0 6px 0 0;
+        }
+
+        .zebra th:only-child{
+            -moz-border-radius: 6px 6px 0 0;
+            -webkit-border-radius: 6px 6px 0 0;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .zebra tfoot td {
+            border-bottom: 0;
+            border-top: 1px solid #fff;
+            background-color: #f1f1f1;
+        }
+
+        .zebra tfoot td:first-child {
+            -moz-border-radius: 0 0 0 6px;
+            -webkit-border-radius: 0 0 0 6px;
+            border-radius: 0 0 0 6px;
+        }
+
+        .zebra tfoot td:last-child {
+            -moz-border-radius: 0 0 6px 0;
+            -webkit-border-radius: 0 0 6px 0;
+            border-radius: 0 0 6px 0;
+        }
+
+        .zebra tfoot td:only-child{
+            -moz-border-radius: 0 0 6px 6px;
+            -webkit-border-radius: 0 0 6px 6px
+            border-radius: 0 0 6px 6px
+        }
+
+    </style>
+</head>
+
+<body>
+<h2 id="necessary_title">必填变量列表</h2>
+<table class="bordered" id="necessary">
+    <thead>
+    <tr>
+        <!-- <th style="color:#000000">#</th>   -->
+        <th style="color:#000000">变量名称</th>
+        <th style="color:#000000">Type</th>
+        <th style="color:#000000">初始值</th>
+    </tr>
+    </thead>
+</table>
+
+<h2 id="trend_title">趋势征兆列表</h2>
+<table class="bordered" id="trend">
+    <thead>
+    <tr>
+        <!-- <th style="color:#000000">#</th>   -->
+        <th style="color:#000000">变量名称</th>
+        <th style="color:#000000">Type</th>
+        <th style="color:#000000">初始值</th>
+
+    </tr>
+    </thead>
+</table>
+
+<h2 id="vibrate_title">波动性变量列表</h2>
+<table class="bordered" id="vibrate">
+    <thead>
+    <tr>
+        <!-- <th style="color:#000000">#</th>   -->
+        <th style="color:#000000">变量名称</th>
+        <th style="color:#000000">Type</th>
+        <th style="color:#000000">初始值</th>
+
+    </tr>
+    </thead>
+</table>
+
+
+<h2 id="convex_concave_title">凹凸性变量列表</h2>
+<table class="bordered" id="convex_concave">
+    <thead>
+    <tr>
+        <!-- <th style="color:#000000">#</th>   -->
+        <th style="color:#000000">变量名称</th>
+        <th style="color:#000000">Type</th>
+        <th style="color:#000000">初始值</th>
+
+    </tr>
+    </thead>
+</table>
+
+<h2 id="mono_title">单调性变量列表</h2>
+<table class="bordered" id="mono">
+    <thead>
+    <tr>
+        <!-- <th style="color:#000000">#</th>   -->
+        <th style="color:#000000">变量名称</th>
+        <th style="color:#000000">Type</th>
+        <th style="color:#000000">初始值</th>
+
+    </tr>
+    </thead>
+</table>
+
+<h2 id="vibrate_mono_title">波动单调变量列表</h2>
+<table class="bordered" id="vibrate_mono">
+    <thead>
+    <tr>
+        <!-- <th style="color:#000000">#</th>   -->
+        <th style="color:#000000">变量名称</th>
+        <th style="color:#000000">Type</th>
+        <th style="color:#000000">初始值</th>
+
+    </tr>
+    </thead>
+</table>
+
+<h2 id="threshold_title">阈值征兆变量列表</h2>
+<table class="bordered" id="threshold">
+    <thead>
+    <tr>
+        <!-- <th style="color:#000000">#</th>   -->
+        <th style="color:#000000">变量名称</th>
+        <th style="color:#000000">Type</th>
+        <th style="color:#000000">初始值</th>
+
+    </tr>
+    </thead>
+</table>
+
+<br>
+<br>
+<button id="submit_all" style="background-color: #7ED321;width: 76px;height: 36px;color: #FFFFFF">提交</button>
+
+
+</body>
+<script>
+    debugger;
+    // recover from data
+    _this = window.parent.dwf_ctx;
+    // if(_this.getAddinById("TextInput12").getValue() == ""){
+    //     _this.getAddinById("TextInput12").setValue("{}");
+    // }
+    function showPresages(){
+        let chosen_presages = _this.getAddinById("SelectInput18").getValue();
+
+        if(chosen_presages == '' || chosen_presages == null){
+            chosen_presages = [];
+        }
+        else{
+            chosen_presages = chosen_presages.split(',');
+            console.log(chosen_presages);
+        }
+        if(chosen_presages.indexOf("平稳") >= 0){
+            document.getElementById("vibrate_title").hidden = false;
+            document.getElementById("vibrate").hidden = false;
+        }else{
+            document.getElementById("vibrate_title").hidden = true;
+            document.getElementById("vibrate").hidden = true;
+        }
+        if(chosen_presages.indexOf("凹凸") >= 0){
+            document.getElementById("convex_concave_title").hidden = false;
+            document.getElementById("convex_concave").hidden = false;
+        }
+        else{
+            document.getElementById("convex_concave_title").hidden = true;
+            document.getElementById("convex_concave").hidden = true;
+        }
+        if(chosen_presages.indexOf("单调") >= 0){
+            document.getElementById("mono_title").hidden = false;
+            document.getElementById("mono").hidden = false;
+        }else{
+            document.getElementById("mono_title").hidden = true;
+            document.getElementById("mono").hidden = true;
+        }
+        if(chosen_presages.indexOf("波动") >= 0){
+            document.getElementById("vibrate_mono_title").hidden = false;
+            document.getElementById("vibrate_mono").hidden = false;
+        }
+        else{
+            document.getElementById("vibrate_mono_title").hidden = true;
+            document.getElementById("vibrate_mono").hidden = true;
+        }
+        if(chosen_presages.indexOf("阈值") >= 0){
+            document.getElementById("threshold_title").hidden = false;
+            document.getElementById("threshold").hidden = false;
+        }else{
+            document.getElementById("threshold_title").hidden = true;
+            document.getElementById("threshold").hidden = true;
+        }
+        if (chosen_presages.indexOf("平稳") >= 0 || chosen_presages.indexOf("凹凸") >= 0 || chosen_presages.indexOf("单调") >= 0 ||
+            chosen_presages.indexOf("波动") >= 0){
+            document.getElementById("trend_title").hidden = false;
+            document.getElementById("trend").hidden = false;
+        }
+        else{
+            document.getElementById("trend_title").hidden = true;
+            document.getElementById("trend").hidden = true;
+        }
+    }
+    let option = _this.getAddinById("TextInput12").getValue();
+    debugger;
+
+    let filled_lists = new Array(8).fill(0);
+    if(option != ''){
+        console.log(option);
+        option = JSON.parse(option);
+
+
+        let name2init = {};
+        for (var i=0; i<option.length; i++){
+            let name = option[i]["name"];
+            let value = option[i]["init"];
+            name2init[name] = value;
+        }
+        for(var i=0; i<option.length; i++){
+            let name = option[i]["name"];
+            let value = option[i]["init"];
+            if(name == "time_type"){
+                filled_lists[0] = 1;
+                if(value == 'now'){
+                    x = document.getElementById('necessary').insertRow(document.getElementById("necessary").rows.length);
+
+                    cell1 = x.insertCell(0);
+                    cell2 = x.insertCell(1);
+                    cell3 = x.insertCell(2);
+                    cell1.innerText = "time_type";
+                    cell2.innerText = "String";
+                    cell3.innerHTML = "<select id = \"time_type\">\
+                    <option value=\"now\">now</option>\
+                    <option value=\"past\">past</option>\
+                    <option value=\"replay\">replay</option>\
+                    </select>";
+                }
+                else if (value == "past" || value == "replay"){
+                    x = document.getElementById('necessary').insertRow(document.getElementById("necessary").rows.length);
+
+                    cell1 = x.insertCell(0);
+                    cell2 = x.insertCell(1);
+                    cell3 = x.insertCell(2);
+                    cell1.innerText = "time_type";
+                    cell2.innerText = "String";
+                    cell3.innerHTML = "<select id = \"time_type\" value=\""+value+"\">\
+                    <option value=\"now\">now</option>\
+                    <option value=\"past\">past</option>\
+                    <option value=\"replay\">replay</option>\
+                    </select>";
+
+                    x = document.getElementById('necessary').insertRow(document.getElementById("necessary").rows.length);
+
+                    cell1 = x.insertCell(0);
+                    cell2 = x.insertCell(1);
+                    cell3 = x.insertCell(2);
+                    cell1.innerText = "time_point";
+                    cell2.innerText = "TimeStamp";
+                    cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"time_point\" style=\"width:100px\" value=\""+name2init[name]+"\">";
+                    i++;
+                }
+            }
+            else if(name == "trend_range_day"){
+                filled_lists[1] = 1;
+                x = document.getElementById('trend').insertRow(document.getElementById("trend").rows.length);
+
+                cell1 = x.insertCell(0);
+                cell2 = x.insertCell(1);
+                cell3 = x.insertCell(2);
+                // cell3.id = "trend_range_day";
+                cell1.innerText = "trend_range_day";
+                cell2.innerText = "Double";
+                cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"trend_range_day\" style=\"width:100px\" value=\""+name2init[name]+"\">";
+
+                x = document.getElementById('trend').insertRow(document.getElementById("trend").rows.length);
+
+                cell1 = x.insertCell(0);
+                cell2 = x.insertCell(1);
+                cell3 = x.insertCell(2);
+                // cell3.id = "resample_fre";
+                cell1.innerText = "resample_fre";
+                cell2.innerText = "Double";
+                cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"resample_fre\" style=\"width:100px\" value=\""+name2init[option[i+1]["init"]]+"\">";
+
+                x = document.getElementById('trend').insertRow(document.getElementById("trend").rows.length);
+
+                cell1 = x.insertCell(0);
+                cell2 = x.insertCell(1);
+                cell3 = x.insertCell(2);
+                // cell3.id = "resample_method";
+                cell1.innerText = "resample_method";
+                cell2.innerText = "String";
+                cell3.innerHTML = "<select id=\"resample_method\" value=\" "+name2init[option[i+2]["init"]]+"\">\
+        <option value=\"median\">ratio_count</option>\
+        <option value=\"average\">average</option>\
+        </select>";
+
+                i+=2;
+            }
+            else if(name == "ADF_pvalue"){
+                filled_lists[2] = 1;
+                x = document.getElementById('vibrate').insertRow(document.getElementById("vibrate").rows.length);
+
+                cell1 = x.insertCell(0);
+                cell2 = x.insertCell(1);
+                cell3 = x.insertCell(2);
+                // cell3.id = "ADF_pvalue";
+                cell1.innerText = "ADF_pvalue";
+                cell2.innerText = "Double";
+                cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"ADF_pvalue\" style=\"width:100px\" value=\""+name2init[name]+"\">";
+            }
+            else if(name == "z_window"){
+                filled_lists[3] = 1;
+                x = document.getElementById('convex_concave').insertRow(document.getElementById("convex_concave").rows.length);
+
+                cell1 = x.insertCell(0);
+                cell2 = x.insertCell(1);
+                cell3 = x.insertCell(2);
+                // cell3.id = "convex_concave";
+                cell1.innerText = "z_window";
+                cell2.innerText = "Double";
+                cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"z_window\" style=\"width:100px\" value=\""+name2init[name]+"\">";
+            }
+            else if(name == "monotonicity_window"){
+                filled_lists[4] = 1;
+                x = document.getElementById('mono').insertRow(document.getElementById("mono").rows.length);
+
+                cell1 = x.insertCell(0);
+                cell2 = x.insertCell(1);
+                cell3 = x.insertCell(2);
+                // cell3.id = "monotonicity_window";
+                cell1.innerText = "monotonicity_window";
+                cell2.innerText = "Double";
+                cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"monotonicity_window\" style=\"width:100px\" value=\""+name2init[name]+"\">";
+            }
+            else if(name == "slope_method"){
+                x = document.getElementById('mono').insertRow(document.getElementById("mono").rows.length);
+
+                cell1 = x.insertCell(0);
+                cell2 = x.insertCell(1);
+                cell3 = x.insertCell(2);
+                // cell3.id = "slope_method";
+                cell1.innerText = "slope_method";
+                cell2.innerText = "String";
+                cell3.innerHTML = "<select id=\"slope_method\" value=\""+name2init[name]+"\">\
+                                    <option value=\"ratio_count\">ratio_count</option>\
+                                    <option value=\"slope\">slope</option>\
+                                    </select>";
+                if(value == "slope"){
+                    x = document.getElementById('mono').insertRow(document.getElementById("mono").rows.length);
+
+                    cell1 = x.insertCell(0);
+                    cell2 = x.insertCell(1);
+                    cell3 = x.insertCell(2);
+                    // cell3.id = "segment_method";
+                    cell1.innerText = "segment_method";
+                    cell2.innerText = "String";
+                    // 下拉菜单进行选择
+                    cell3.innerHTML = "<select id=\"segment_method\" value=\""+name2init[option[i+1]["init"]]+"\">\
+                                    <option value=\"jenks\">jenks</option>\
+                                    </select>";
+
+                    x = document.getElementById('mono').insertRow(document.getElementById("mono").rows.length);
+
+                    cell1 = x.insertCell(0);
+                    cell2 = x.insertCell(1);
+                    cell3 = x.insertCell(2);
+                    // cell3.id = "classification_number";
+                    cell1.innerText = "classification_number";
+                    cell2.innerText = "Double";
+                    // 下拉菜单进行选择
+                    cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"classification_number\" style=\"width:100px\" value=\""+name2init[option[i+2]["init"]]+"\">";
+                    i += 2;
+                }
+                document.getElementById('slope_method').onchange = function(){
+                    let time_type = document.getElementById("slope_method").value;
+                    if(time_type == "slope" && document.getElementById("mono").rows.length < 5){
+
+                        x = document.getElementById('mono').insertRow(document.getElementById("mono").rows.length);
+                        cell1 = x.insertCell(0);
+                        cell2 = x.insertCell(1);
+                        cell3 = x.insertCell(2);
+                        cell1.innerText = "segment_method";
+                        cell2.innerText = "String";
+                        cell3.innerHTML = "<select id=\"segment_method\">\
+                        <option value=\"jenkspy\">jenkspy</option>\
+                        </select>";
+
+                        x = document.getElementById('mono').insertRow(document.getElementById("mono").rows.length);
+                        cell1 = x.insertCell(0);
+                        cell2 = x.insertCell(1);
+                        cell3 = x.insertCell(2);
+                        cell1.innerText = "classification_number";
+                        cell2.innerText = "Int";
+                        cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"classification_number\" style=\"width:100px\">";
+
+
+                        return;
+                    }
+                    else if (time_type == "slope"){
+                        return ;
+                    }
+                    else if (document.getElementById("mono").rows.length == 5){
+                        document.getElementById("mono").rows[4].remove();
+                        document.getElementById("mono").rows[3].remove();
+                    }
+                };
+            }
+            else if(name == "vibrate_window"){
+                filled_lists[5] = 1;
+                x = document.getElementById('vibrate_mono').insertRow(document.getElementById("vibrate_mono").rows.length);
+
+                cell1 = x.insertCell(0);
+                cell2 = x.insertCell(1);
+                cell3 = x.insertCell(2);
+                // cell3.id = "vibrate_window";
+                cell1.innerText = "vibrate_window";
+                cell2.innerText = "String";
+                // 下拉菜单进行选择
+                cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"vibrate_window\" style=\"width:100px\" value=\""+value+"\">";
+            }
+            else if(name == "threshold_range_day"){
+                filled_lists[6] = 1;
+                x = document.getElementById('threshold').insertRow(document.getElementById("threshold").rows.length);
+
+                cell1 = x.insertCell(0);
+                cell2 = x.insertCell(1);
+                cell3 = x.insertCell(2);
+                cell1.innerText = "threshold_range_day";
+                cell2.innerText = "Double";
+                // 下拉菜单进行选择
+                cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"threshold_range_day\" style=\"width:100px\" value=\""+value+"\">";
+            }
+        }
+    }
+    {
+        if(filled_lists[0] == 0){
+            x = document.getElementById('necessary').insertRow(document.getElementById("necessary").rows.length);
+
+            cell1 = x.insertCell(0);
+            cell2 = x.insertCell(1);
+            cell3 = x.insertCell(2);
+            cell1.innerText = "time_type";
+            cell2.innerText = "String";
+            cell3.innerHTML = "<select id=\"time_type\">\
+            <option value=\"now\">now</option>\
+            <option value=\"past\">past</option>\
+            <option value=\"replay\">replay</option>\
+            </select>";
+        }
+
+        if(filled_lists[1] == 0){
+            x = document.getElementById('trend').insertRow(document.getElementById("trend").rows.length);
+            cell1 = x.insertCell(0);
+            cell2 = x.insertCell(1);
+            cell3 = x.insertCell(2);
+            cell1.innerText = "trend_range_day";
+            cell2.innerText = "Double";
+            cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"trend_range_day\" style=\"width:100px\">";
+
+            x = document.getElementById('trend').insertRow(document.getElementById("trend").rows.length);
+            cell1 = x.insertCell(0);
+            cell2 = x.insertCell(1);
+            cell3 = x.insertCell(2);
+            cell1.innerText = "resample_fre";
+            cell2.innerText = "Double";
+            cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"resample_fre\" style=\"width:100px\">";
+
+            x = document.getElementById('trend').insertRow(document.getElementById("trend").rows.length);
+            cell1 = x.insertCell(0);
+            cell2 = x.insertCell(1);
+            cell3 = x.insertCell(2);
+            cell1.innerText = "resample_method";
+            cell2.innerText = "String";
+            cell3.innerHTML = "<select id=\"resample_method\">\
+            <option value=\"median\">median</option>\
+            <option value=\"average\">average</option>\
+            </select>";
+        }
+
+        if(filled_lists[2] == 0){
+            x = document.getElementById('vibrate').insertRow(document.getElementById("vibrate").rows.length);
+            cell1 = x.insertCell(0);
+            cell2 = x.insertCell(1);
+            cell3 = x.insertCell(2);
+            cell1.innerText = "ADF_pvalue";
+            cell2.innerText = "Double";
+            cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"ADF_pvalue\" style=\"width:100px\" value=\"0.05\">";
+        }
+
+        if(filled_lists[3] == 0){
+            x = document.getElementById('convex_concave').insertRow(document.getElementById("convex_concave").rows.length);
+            cell1 = x.insertCell(0);
+            cell2 = x.insertCell(1);
+            cell3 = x.insertCell(2);
+            cell1.innerText = "z_window";
+            cell2.innerText = "Double";
+            cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"z_window\" style=\"width:100px\">";
+        }
+
+        if(filled_lists[4] == 0){
+            x = document.getElementById('mono').insertRow(document.getElementById("mono").rows.length);
+            cell1 = x.insertCell(0);
+            cell2 = x.insertCell(1);
+            cell3 = x.insertCell(2);
+            cell1.innerText = "monotonicity_window";
+            cell2.innerText = "Double";
+            cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"monotonicity_window\" style=\"width:100px\">";
+
+            x = document.getElementById('mono').insertRow(document.getElementById("mono").rows.length);
+            cell1 = x.insertCell(0);
+            cell2 = x.insertCell(1);
+            cell3 = x.insertCell(2);
+            cell1.innerText = "slope_method";
+            cell2.innerText = "String";
+            cell3.innerHTML = "<select id=\"slope_method\">\
+            <option value=\"ratio_count\">ratio_count</option>\
+            <option value=\"slope\">slope</option>\
+            </select>";
+            document.getElementById('slope_method').onchange = function(){
+                debugger;
+                let slope_method = document.getElementById("slope_method").value;
+                if(slope_method == "slope" && document.getElementById("mono").rows.length < 5){
+
+                    x = document.getElementById('mono').insertRow(document.getElementById("mono").rows.length);
+                    cell1 = x.insertCell(0);
+                    cell2 = x.insertCell(1);
+                    cell3 = x.insertCell(2);
+                    cell1.innerText = "segment_method";
+                    cell2.innerText = "String";
+                    cell3.innerHTML = "<select id=\"segment_method\">\
+            <option value=\"jenkspy\">jenkspy</option>\
+            </select>";
+
+                    x = document.getElementById('mono').insertRow(document.getElementById("mono").rows.length);
+                    cell1 = x.insertCell(0);
+                    cell2 = x.insertCell(1);
+                    cell3 = x.insertCell(2);
+                    cell1.innerText = "classification_number";
+                    cell2.innerText = "Int";
+                    cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"classification_number\" style=\"width:100px\" value=\"4\">";
+
+
+                    return;
+                }
+                else if (slope_method == "slope"){
+                    return ;
+                }
+                else if (document.getElementById("mono").rows.length == 5){
+                    document.getElementById("mono").rows[4].remove();
+                    document.getElementById("mono").rows[3].remove();
+                }
+            };
+        }
+
+        if(filled_lists[5] == 0){
+            x = document.getElementById('vibrate_mono').insertRow(document.getElementById("vibrate_mono").rows.length);
+            cell1 = x.insertCell(0);
+            cell2 = x.insertCell(1);
+            cell3 = x.insertCell(2);
+            cell1.innerText = "vibrate_window";
+            cell2.innerText = "String";
+            // 下拉菜单进行选择
+            cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"vibrate_window\" style=\"width:100px\">";
+        }
+
+        if(filled_lists[6] == 0){
+            x = document.getElementById('threshold').insertRow(document.getElementById("threshold").rows.length);
+            cell1 = x.insertCell(0);
+            cell2 = x.insertCell(1);
+            cell3 = x.insertCell(2);
+            cell1.innerText = "threshold_range_day";
+            cell2.innerText = "Double";
+            // 下拉菜单进行选择
+            cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"threshold_range_day\" style=\"width:100px\">";
+        }
+
+
+    }
+
+
+    document.getElementById("trend_title").hidden = true;
+    document.getElementById("trend").hidden = true;
+    document.getElementById("vibrate_title").hidden = true;
+    document.getElementById("vibrate").hidden = true;
+    document.getElementById("convex_concave_title").hidden = true;
+    document.getElementById("convex_concave").hidden = true;
+    document.getElementById("mono_title").hidden = true;
+    document.getElementById("mono").hidden = true;
+    document.getElementById("vibrate_mono_title").hidden = true;
+    document.getElementById("vibrate_mono").hidden = true;
+    document.getElementById("threshold_title").hidden = true;
+    document.getElementById("threshold").hidden = true;
+    showPresages();
+    document.getElementById("time_type").onchange = function(){
+        debugger;
+        let time_type = document.getElementById("time_type").value;
+        if(time_type == "now" && document.getElementById("necessary").rows.length == 3){
+            document.getElementById("necessary").rows[2].remove();
+            return;
+        }
+        else if (document.getElementById("necessary").rows.length >= 3){
+            return ;
+        }
+        else if (document.getElementById("necessary").rows.length < 3){
+            x = document.getElementById('necessary').insertRow(document.getElementById("necessary").rows.length);
+            cell1 = x.insertCell(0);
+            cell2 = x.insertCell(1);
+            cell3 = x.insertCell(2);
+            cell1.innerText = "time_point";
+            cell2.innerText = "TimeStamp";
+            cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"time_point\" style=\"width:100px\">";
+        }
+
+    };
+    // _this.getAddinById("SelectInput18").handleValueChanged = customctl;
+    //DWF bug:需要点击两次才能够覆盖原来的执行逻辑
+    // _this.getAddinById("SelectInput18").handleValueChanged()
+
+
+    window.parent.changeValue = function(){
+        debugger;
+        showPresages();
+    }
+    function getSaveData(){
+        debugger;
+        let chosen_presages = _this.getAddinById("SelectInput18").getValue();
+        let option = [];
+        let time_type = document.getElementById("time_type").value;
+        if(time_type){
+            option.push({name: "time_type", type: "String", init: time_type});
+            if(time_type == "replay" || time_type == "past"){
+                option.push({name: "time_point", type: "TimeStamp", init: document.getElementById("time_point").value});
+            }
+        }
+        console.log(option);
+        if(chosen_presages == null){
+            chosen_presages = [];
+        }
+        else{
+            chosen_presages = chosen_presages.split(',');
+            console.log(chosen_presages);
+        }
+
+        //一定需要按照该顺序进行seriealize
+        if (chosen_presages.indexOf("平稳") >= 0 || chosen_presages.indexOf("凹凸") >= 0 || chosen_presages.indexOf("单调") >= 0 ||
+            chosen_presages.indexOf("波动") >= 0){
+            option.push({name: "trend_range_day", type: "Double", init: document.getElementById("trend_range_day").value});
+            option.push({name: "resample_fre", type: "Double", init: document.getElementById("resample_fre").value});
+            option.push({name: "resample_method", type: "String", init: document.getElementById("resample_method").value});
+        }
+        console.log(option);
+        if(chosen_presages.indexOf("平稳") >= 0){
+            option.push({name: "ADF_pvalue", type: "Double", init: document.getElementById("ADF_pvalue").value});
+        }
+        console.log(option);
+        if(chosen_presages.indexOf("凹凸") >= 0){
+            option.push({name: "z_window", type: "Double", init: document.getElementById("z_window").value});
+        }
+        console.log(option);
+        if(chosen_presages.indexOf("单调") >= 0){
+            option.push({name: "monotonicity_window", type: "Double", init: document.getElementById("monotonicity_window").value});
+            let slope_method = document.getElementById("slope_method").value;
+            option.push({name: "slope_method", type: "String", init: document.getElementById("slope_method").value});
+            if(slope_method == "slope"){
+                option.push({name: "segment_method", type: "String", init: document.getElementById("segment_method").value});
+                option.push({name: "classification_number", type: "Double", init: document.getElementById("classification_number").value});
+            }
+        }
+        console.log(option);
+        if(chosen_presages.indexOf("波动") >= 0){
+            option.push({name: "vibrate_window", type: "Double", init: document.getElementById("vibrate_window").value});
+        }
+        console.log(option);
+        if(chosen_presages.indexOf("阈值") >= 0){
+            option.push({name: "threshold_range_day", type: "Double", init: document.getElementById("threshold_range_day").value});
+        }
+        console.log(option);
+
+        return option;
+    }
+    submit_all = document.getElementById("submit_all");
+    submit_all.onclick = function(){
+        debugger;
+        let option = getSaveData();
+        result = JSON.stringify(option);
+        console.log(result);
+        _this.getAddinById("TextInput12").setValue(result);
+        _this.msgbox.success("变量保存成功");
+    }
+
+
+
+</script>
+
+</html>
