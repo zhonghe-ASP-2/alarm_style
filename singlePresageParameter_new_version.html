@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title> New Document </title>
+    <meta name="Generator" content="EditPlus">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <style>
+
+        body {
+            width: 600px;
+            margin: 40px auto;
+            font-family: 'trebuchet MS', 'Lucida sans', Arial;
+            font-size: 14px;
+            color: #000000;
+        }
+
+        table {
+            *border-collapse: collapse; /* IE7 and lower */
+            border-spacing: 0;
+            width: 100%;
+        }
+
+        .bordered {
+            border: solid #ccc 1px;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            border-radius: 6px;
+            -webkit-box-shadow: 0 1px 1px #ccc;
+            -moz-box-shadow: 0 1px 1px #ccc;
+            box-shadow: 0 1px 1px #ccc;
+        }
+
+        .bordered tr:hover {
+            background: #fbf8e9;
+            -o-transition: all 0.1s ease-in-out;
+            -webkit-transition: all 0.1s ease-in-out;
+            -moz-transition: all 0.1s ease-in-out;
+            -ms-transition: all 0.1s ease-in-out;
+            transition: all 0.1s ease-in-out;
+        }
+
+        .bordered td, .bordered th {
+            border-left: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .bordered th {
+            background-color: #dce9f9;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+            background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+            background-image: -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+            background-image: -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+            background-image: -o-linear-gradient(top, #ebf3fc, #dce9f9);
+            background-image: linear-gradient(top, #ebf3fc, #dce9f9);
+            -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+            -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+            box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+            border-top: none;
+            text-shadow: 0 1px 0 rgba(255,255,255,.5);
+        }
+
+        .bordered td:first-child, .bordered th:first-child {
+            border-left: none;
+        }
+
+        .bordered th:first-child {
+            -moz-border-radius: 6px 0 0 0;
+            -webkit-border-radius: 6px 0 0 0;
+            border-radius: 6px 0 0 0;
+        }
+
+        .bordered th:last-child {
+            -moz-border-radius: 0 6px 0 0;
+            -webkit-border-radius: 0 6px 0 0;
+            border-radius: 0 6px 0 0;
+        }
+
+        .bordered th:only-child{
+            -moz-border-radius: 6px 6px 0 0;
+            -webkit-border-radius: 6px 6px 0 0;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .bordered tr:last-child td:first-child {
+            -moz-border-radius: 0 0 0 6px;
+            -webkit-border-radius: 0 0 0 6px;
+            border-radius: 0 0 0 6px;
+        }
+
+        .bordered tr:last-child td:last-child {
+            -moz-border-radius: 0 0 6px 0;
+            -webkit-border-radius: 0 0 6px 0;
+            border-radius: 0 0 6px 0;
+        }
+
+        /*----------------------*/
+
+        .zebra td, .zebra th {
+            padding: 10px;
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        .zebra tbody tr:nth-child(even) {
+            background: #f5f5f5;
+            -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+            -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+            box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+        }
+
+        .zebra th {
+            text-align: left;
+            text-shadow: 0 1px 0 rgba(255,255,255,.5);
+            border-bottom: 1px solid #ccc;
+            background-color: #eee;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eee));
+            background-image: -webkit-linear-gradient(top, #f5f5f5, #eee);
+            background-image: -moz-linear-gradient(top, #f5f5f5, #eee);
+            background-image: -ms-linear-gradient(top, #f5f5f5, #eee);
+            background-image: -o-linear-gradient(top, #f5f5f5, #eee);
+            background-image: linear-gradient(top, #f5f5f5, #eee);
+        }
+
+        .zebra th:first-child {
+            -moz-border-radius: 6px 0 0 0;
+            -webkit-border-radius: 6px 0 0 0;
+            border-radius: 6px 0 0 0;
+        }
+
+        .zebra th:last-child {
+            -moz-border-radius: 0 6px 0 0;
+            -webkit-border-radius: 0 6px 0 0;
+            border-radius: 0 6px 0 0;
+        }
+
+        .zebra th:only-child{
+            -moz-border-radius: 6px 6px 0 0;
+            -webkit-border-radius: 6px 6px 0 0;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .zebra tfoot td {
+            border-bottom: 0;
+            border-top: 1px solid #fff;
+            background-color: #f1f1f1;
+        }
+
+        .zebra tfoot td:first-child {
+            -moz-border-radius: 0 0 0 6px;
+            -webkit-border-radius: 0 0 0 6px;
+            border-radius: 0 0 0 6px;
+        }
+
+        .zebra tfoot td:last-child {
+            -moz-border-radius: 0 0 6px 0;
+            -webkit-border-radius: 0 0 6px 0;
+            border-radius: 0 0 6px 0;
+        }
+
+        .zebra tfoot td:only-child{
+            -moz-border-radius: 0 0 6px 6px;
+            -webkit-border-radius: 0 0 6px 6px
+            border-radius: 0 0 6px 6px
+        }
+
+    </style>
+</head>
+
+<body>
+
+<h2>变量列表</h2>
+<table class="bordered" id="list">
+    <thead>
+    <tr>
+        <!-- <th style="color:#000000">#</th>   -->
+        <th style="color:#000000">变量名称</th>
+        <th style="color:#000000">Type</th>
+        <th style="color:#000000">初始值</th>
+
+    </tr>
+    </thead>
+</table>
+<br>
+<br>
+<button id="submit_all" style="background-color: #7ED321;width: 76px;height: 36px;color: #FFFFFF">提交</button>
+</details>
+
+
+</body>
+<script>
+    debugger;
+    _this = window.parent.dwf_ctx;
+    if(_this.getAddinById("TextInput16").getValue() == ""){
+        _this.getAddinById("TextInput16").setValue("{}");
+    }
+    configVariables = JSON.parse(_this.getAddinById("TextInput16").getValue());
+    for(var i=0; i<configVariables.length; i++){
+        varTemp = configVariables[i];
+        name = varTemp["name"];
+        type = varTemp["type"];
+        init = varTemp["init"];
+        x = document.getElementById('list').insertRow(document.getElementById("list").rows.length);
+        // cell0 = x.insertCell(0);
+        cell1 = x.insertCell(0);
+        cell2 = x.insertCell(1);
+        cell3 = x.insertCell(2);
+        cell1.innerText = name;
+        cell2.innerText = type;
+        cell3.innerText = init;
+    }
+
+    function setParameter(chosen_presage){
+        let rows = document.getElementById("list").rows;
+        //清空全部
+        let row_length = rows.length;
+        for(var i=row_length-1; i>=1; i--){
+            document.getElementById("list").rows[i].remove();
+        }
+        //根据具体的征兆将需要填写的参数插入
+        if(chose_preage[0] == 'T'){
+            x = document.getElementById('list').insertRow(document.getElementById("list").rows.length);
+            cell1 = x.insertCell(0);
+            cell2 = x.insertCell(1);
+            cell3 = x.insertCell(2);
+            cell1.innerText = "lower";
+            cell2.innerText = "Double";
+            cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"lower\" style=\"width:100px\">";
+
+            x = document.getElementById('list').insertRow(document.getElementById("list").rows.length);
+            cell1 = x.insertCell(0);
+            cell2 = x.insertCell(1);
+            cell3 = x.insertCell(2);
+            cell1.innerText = "upper";
+            cell2.innerText = "Double";
+            cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"upper\" style=\"width:100px\">";
+        }
+        else if(chosen_preage == 'S12' || chosen_preage == 'S04'){
+            x = document.getElementById('list').insertRow(document.getElementById("list").rows.length);
+            cell1 = x.insertCell(0);
+            cell2 = x.insertCell(1);
+            cell3 = x.insertCell(2);
+            cell1.innerText = "std";
+            cell2.innerText = "Double";
+            cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"std\" style=\"width:100px\">";
+        }
+        else if(chosen_presage == 'S09' || chosen_preage == 'S08'){
+
+        }
+        else if(chosen_presage == 'S01' || chosen_presage == 'S02' || chosen_presage == 'S03'){
+            x = document.getElementById('list').insertRow(document.getElementById("list").rows.length);
+            cell1 = x.insertCell(0);
+            cell2 = x.insertCell(1);
+            cell3 = x.insertCell(2);
+            cell1.innerText = "rise_range";
+            cell2.innerText = "Double";
+            cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"rise_range\" style=\"width:100px\">";
+        }
+        else if(chosen_presage == 'S05' || chosen_presage == 'S06' || chosen_presage == 'S07'){
+            x = document.getElementById('list').insertRow(document.getElementById("list").rows.length);
+            cell1 = x.insertCell(0);
+            cell2 = x.insertCell(1);
+            cell3 = x.insertCell(2);
+            cell1.innerText = "drop_range";
+            cell2.innerText = "Double";
+            cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"drop_range\" style=\"width:100px\">";
+        }
+        else if(chosen_presage == "S10" || chosen_presage == "S11"){
+            x = document.getElementById('list').insertRow(document.getElementById("list").rows.length);
+            cell1 = x.insertCell(0);
+            cell2 = x.insertCell(1);
+            cell3 = x.insertCell(2);
+            cell1.innerText = "window_size";
+            cell2.innerText = "Double";
+            cell3.innerHTML = "<input type=\"text\" name=\"init\" id=\"drop_range\" style=\"width:100px\">";
+        }
+    }
+    window.parent.changeValue = function(){
+        debugger;
+        let chosen_presage = _this.getAddinById("SelectInput14").getValue();
+        setParameter(chosen_presage);
+    }
+
+    submit_all = document.getElementById("submit_all");
+    submit_all.onclick = function(){
+        debugger;
+        let rows = document.getElementById("list").rows;
+        let row_length = rows.length;
+        let option = [];
+        for(var i=1; i<row_length; i++){
+            option.push({name: rows[i]["name"], type: rows[i]["type"], init: rows[i]["init"]});
+        }
+        result = JSON.stringify(option);
+        _this.getAddinById("TextInput16").setValue(result);
+        _this.msgbox.success("变量保存成功");
+    }
+
+
+
+</script>
+
+</html>
